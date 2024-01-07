@@ -21,7 +21,7 @@ async function createWindow () {
         win.webContents.openDevTools();
         win.removeMenu();
     } else {
-        win.loadURL(`file://${path.join(__dirname, '..' ,'dist', 'index.html')}`);
+        win.loadURL(`file://${path.join(__dirname, 'index.html')}`);
         win.removeMenu();
     }
 

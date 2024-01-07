@@ -1,0 +1,8 @@
+{
+    "name": "electron-react-template",
+    "description": "A template for creating a react based electron application",
+    "license": "MIT",
+    "version": "0.0.0",
+    "type": "commonjs",
+    "main": "./main.cjs"
+}
