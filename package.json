@@ -13,7 +13,7 @@
     "esbuild": "./esbuild.config.mjs",
     "electron:dev": "npm run esbuild && IS_IN_DEVELOPMENT=true electron .",
     "electron:build": "npm run esbuild && electron-packager ./dist electron-react-template --asar --overwrite --out=release",
-    "release": "npm run react:build && npm run electron:build"
+    "package": "npm run react:build && npm run electron:build"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
