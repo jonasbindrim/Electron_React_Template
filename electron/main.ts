@@ -3,7 +3,7 @@ import path from 'path'
 
 import ExampleBackend from './exampleRessource/exampleBackend';
 
-const IS_DEV = process.env.IS_IN_DEVELOPMENT || false
+const IS_DEV = !app.isPackaged;
 
 const exampleBackend = new ExampleBackend();
 

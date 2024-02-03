@@ -10,8 +10,8 @@
     "react:dev": "tsc && vite --host",
     "react:build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "esbuild": "./esbuild.config.mjs",
-    "electron:dev": "npm run esbuild && IS_IN_DEVELOPMENT=true electron .",
+    "esbuild": "node esbuild.config.mjs",
+    "electron:dev": "npm run esbuild && electron .",
     "electron:build": "npm run esbuild && electron-packager ./dist electron-react-template --asar --overwrite --out=release",
     "package": "npm run react:build && npm run electron:build"
   },
