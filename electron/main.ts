@@ -8,7 +8,7 @@ const IS_DEV = !app.isPackaged;
 const exampleBackend = new ExampleBackend();
 
 async function createWindow () {
-    const win = new BrowserWindow({
+    const browserWindow = new BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
@@ -17,13 +17,13 @@ async function createWindow () {
     });
 
     if (IS_DEV) {
-        win.loadURL('http://localhost:3000');
-        win.webContents.openDevTools();
-        win.removeMenu();
+        browserWindow.loadURL('http://localhost:3000');
+        browserWindow.webContents.openDevTools();
     } else {
-        win.loadURL(`file://${path.join(__dirname, 'index.html')}`);
-        win.removeMenu();
+        browserWindow.loadURL(`file://${path.join(__dirname, 'index.html')}`);
     }
+
+    browserWindow.removeMenu();
 
     exampleBackend.onReady();
 }
